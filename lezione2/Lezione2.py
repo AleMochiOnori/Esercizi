@@ -122,5 +122,116 @@ print(livingAndDead[2], "won't come to the dinner")
 
 
 
+# 3-7. Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and now you have space for only two guests.
+# • Start with your program from Exercise 3-6. Add a new line that prints a message saying that you can invite only two people for dinner.
+# • Use pop() to remove guests from your list one at a time until only two names remain in your list. Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+# • Print a message to each of the two people still on your list, letting them know they’re still invited.
+# • Use del to remove the last two names from your list, so you have an empty list. Print your list to make sure you actually have an empty list at the end of your program.
+
+
+print("unfortunately only two people may enter my door.")
+
+livingAndDead.pop(0)
+print(f"Goku i can't invite you to the dinner")
+livingAndDead.pop(0)
+print(livingAndDead)
+print("Hitler i can't invite you to the dinner")
+livingAndDead.pop(0)
+print("Ghandi i can't invite you to the dinner")
+print(livingAndDead)
+livingAndDead.pop(2)
+print("Elon i can't invite you to the dinner")
+print(livingAndDead)
+livingAndDead.pop(2)
+print("Cikolino i can't invite you to the dinner")
+
+
+print(livingAndDead)
+print(f"congratulation {livingAndDead[0]} you made it!! , and you {livingAndDead[-1]} as well!!")
+
+
+del livingAndDead[0]
+del livingAndDead[0]
+
+print(livingAndDead)
+
+
+
+
+
+
+
+# 3-8. Seeing the World: Think of at least five places in the world you’d like to visit.
+# • Store the locations in a list. Make sure the list is not in alphabetical order.
+# • Print your list in its original order. Don’t worry about printing the list neatly; just print it as a raw Python list.
+# • Use sorted() to print your list in alphabetical order without modifying the actual list.
+# • Show that your list is still in its original order by printing it.
+# • Use sorted() to print your list in reverse-alphabetical order without changing the order of the original list.
+# • Show that your list is still in its original order by printing it again.
+# • Use reverse()  to change the order of your list. Print the list to show that its order has changed.
+# • Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+# • Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+# • Use sort() to change your list so it’s stored in reverse-alphabetical order.
+# Print the list to show that its order has changed.
+
+
+
+
+
+locations: list = ["Cuba" , "New York" , "Spain" , "China" , "Antartic"]
+
+print(locations)
+
+
+
+
+ordered: list = sorted(locations)
+
+print(locations)
+
+
+
+
+reversed : list = sorted(locations, reverse = True)
+
+print(locations)
+
+
+
+
+
+locations.reverse()
+
+print(locations)
+
+
+
+
+locations.sort()
+
+print(locations)
+
+
+locations.sort(reverse=True)
+print(locations)
+
+
+# 3-9. Dinner Guests: Working with one of the programs from Exercises 3, use len() to print a message indicating the number of people you’re inviting to dinner.
+
+
+print("people invited are" , len(livingAndDead))
+
+
+
+
+# 3-10. Every Function: Think of things you could store in a list. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
+
+
+filledList: list = []
+
+filledList.insert("Lake")
+
+
+
 
 
