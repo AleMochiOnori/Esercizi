@@ -37,7 +37,7 @@ result = sum([2,5,4,5,6,4,6,9])
 
 print(result)
 
-
+# Esercizio 1
 
 
 def check_value(a:int , check : int) -> str:
@@ -49,6 +49,9 @@ def check_value(a:int , check : int) -> str:
 
 print(check_value(5 , 6))        
 
+
+
+# Esercizo 2
 
 
 
@@ -63,13 +66,16 @@ def check_lenght(a:str) -> str :
 print(check_lenght("Cikolino"))   
 
 
+# Esercizio 3
+
+
 def print_number(a : list) -> int:
   
     for i in a :
         print(i)
 print_number([2,6,5,5,7])   
 
-
+# Esercizio 4
 
 def check_each(a : list) -> str:
     for i in a:
@@ -80,4 +86,28 @@ def check_each(a : list) -> str:
         else :
             print("the number is equal to 5")     
 check_each([2,6,4,5,9,4])
+
+
+
+
+
+# Esercizio 5
+
+
+
+
+def add_one(a: int) -> int :
+    x = a + 1
+    return x
+print(add_one(1))
+
+
+def add_one_to_list(a : list) -> list:
+    new_list =  []
+    for i in a:
+        new_list.append( add_one(i))
+    return new_list
+    
+
+print(add_one_to_list([1,2,3]))
 
