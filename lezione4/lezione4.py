@@ -105,7 +105,7 @@ print(add_one(1))
 def add_one_to_list(a : list) -> list:
     new_list =  []
     for i in a:
-        new_list.append( add_one(i))
+        new_list.append(add_one(i))
     return new_list
     
 
