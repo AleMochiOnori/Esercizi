@@ -122,6 +122,25 @@ print(livingAndDead[2], "won't come to the dinner")
 
 
 
+
+# 3-6. More Guests: You just found a bigger dinner table, so now more space is available. Think of three more guests to invite to dinner.
+# • Start with your program from Exercise 3-4 or 3-5. Add a print() call to the end of your program, informing people that you found a bigger table.
+# • Use insert() to add one new guest to the beginning of your list.
+# • Use insert() to add one new guest to the middle of your list.
+# • Use append() to add one new guest to the end of your list.
+# • Print a new set of invitation messages, one for each person in your list.
+
+
+
+
+livingAndDead.insert(0,"Goku")
+livingAndDead.insert(3,"Vegeta")
+livingAndDead.append("Gravelord Nito")
+print(livingAndDead)
+
+
+
+
 # 3-7. Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and now you have space for only two guests.
 # • Start with your program from Exercise 3-6. Add a new line that prints a message saying that you can invite only two people for dinner.
 # • Use pop() to remove guests from your list one at a time until only two names remain in your list. Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
@@ -133,17 +152,18 @@ print("unfortunately only two people may enter my door.")
 
 livingAndDead.pop(0)
 print(f"Goku i can't invite you to the dinner")
+print(livingAndDead)
 livingAndDead.pop(0)
 print(livingAndDead)
 print("Hitler i can't invite you to the dinner")
 livingAndDead.pop(0)
 print("Ghandi i can't invite you to the dinner")
 print(livingAndDead)
-livingAndDead.pop(2)
-print("Elon i can't invite you to the dinner")
+livingAndDead.pop(0)
+print("Vegeta i can't invite you to the dinner")
 print(livingAndDead)
-livingAndDead.pop(2)
-print("Cikolino i can't invite you to the dinner")
+livingAndDead.pop(0)
+print("Mussolini i can't invite you to the dinner")
 
 
 print(livingAndDead)
@@ -226,12 +246,14 @@ print("people invited are" , len(livingAndDead))
 
 # 3-10. Every Function: Think of things you could store in a list. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
 
+listaConTanteCose : list = ["Rome","San Franscisco","Belen Rodriguez"]
 
-filledList: list = []
-
-filledList.insert("Lake")
-
-
-
-
+listaConTanteCose.insert(0,"Mount White")
+listaConTanteCose.append("Amsterdam")
+listaConTanteCose.pop(0)
+listaConTanteCose[1] = "Bello de casa"
+del listaConTanteCose[3]
+listaConTanteCose.sort()
+x = sorted(listaConTanteCose)
+listaConTanteCose.reverse()
 
