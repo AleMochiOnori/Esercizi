@@ -8,8 +8,10 @@ def area(x:float,y:float) -> float :
 
 
 x, y = (2,3)
-out = (area(2,5))
 
+
+
+out = (area(2,5))
 print(out)
 
 
@@ -105,7 +107,7 @@ print(add_one(1))
 def add_one_to_list(a : list) -> list:
     new_list =  []
     for i in a:
-        new_list.append( add_one(i))
+        new_list.append(add_one(i))
     return new_list
     
 
