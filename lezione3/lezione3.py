@@ -334,13 +334,11 @@ user_names = ["admin", "user123", "johndoe", "sarahsmith", "techguru45"]
 
 
 
-admin_printed = False  # Variabile per capire se "admin" è stato stampato
-
 
 
 for x in user_names:
     if x == "admin": # controllo se admin è presente nella lista 
-        if not admin_printed:  # Controlla se "admin" non è ancora stato stampato
+        if True:  # Controlla se "admin" non è ancora stato stampato
             print("Hello admin, would you like to see a status report?")
     else:
         print("Hello " , x , ", thank you for logging in again.")
