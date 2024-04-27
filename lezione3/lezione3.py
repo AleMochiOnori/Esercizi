@@ -278,6 +278,10 @@ else:
 
 
 
+
+
+
+
 # 5-6. Stages of Life: Write an if-elif-else chain that determines a person’s stage of life. Set a value for the variable age, and then:
 # • If the person is less than 2 years old, print a message that the person is a baby.
 # • If the person is at least 2 years old but less than 4, print a message that the person is a toddler.
@@ -285,6 +289,12 @@ else:
 # • If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
 # • If the person is at least 20 years old but less than 65, print a message that the person is an adult.
 # • If the person is age 65 or older, print a message that the person is an elder.
+
+
+
+
+
+
 
 
 person : int = 30 
@@ -299,6 +309,14 @@ elif  person >= 13 and person <= 20 :
     print("the person is a teeneager")
 elif person >= 65 :
     print("the person is an elder")    
+
+
+
+
+
+
+
+
 
 
 
@@ -322,17 +340,21 @@ if "apple" in favouirete_fruits :
         
 
 
+
+
+
+
+
+
+
 # 5-8. Hello Admin: Make a list of five or more usernames, including the name 'admin'. Imagine you are writing code that will print a greeting to each user after they log in to a website. Loop through the list, and print a greeting to each user.
 # • If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
 # • Otherwise, print a generic greeting, such as Hello Jaden, thank you for logging in again.        
         
-        
+
+
+
 user_names: list = ["admin","user123","johndoe","sarahsmith","techguru45"]
-
-
-user_names = ["admin", "user123", "johndoe", "sarahsmith", "techguru45"]
-
-
 
 
 
@@ -342,3 +364,23 @@ for x in user_names:
             print("Hello admin, would you like to see a status report?")
     else:
         print("Hello " , x , ", thank you for logging in again.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 5-9. No Users: Add an if test to hello_admin.py to make sure the list of users is not empty.
+# • If the list is empty, print the message We need to find some users!
+# • Remove all of the usernames from your list, and make sure the correct message is printed
+
+
+
+
