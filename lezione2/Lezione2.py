@@ -334,11 +334,11 @@ for a,b in glossary.items() :    # For loop with 2 variables, function .items() 
 
 people : list = [
     {
-    "Alessio" : 2,
-    "Flavio": 20,
-    "Alessandro" : 3,
-    "Roberta" : 50,
-    "Robertino" : 10
+        "Alessio" : 2,
+        "Flavio": 20,
+        "Alessandro" : 3,
+        "Roberta" : 50,
+        "Robertino" : 10
     
     },
 
@@ -535,3 +535,4 @@ for dictionary in complex:
         print(a)
         for x in b:
             print(x)
+        print()    
