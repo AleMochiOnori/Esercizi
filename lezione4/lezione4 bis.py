@@ -20,9 +20,9 @@ print(is_palindrome(121))
 from collections import Counter 
 def lenght_of_last_word(s : str) -> int :
     l: list[str] = s.split()    # Usando lo split elimino gli spazi. Lo split ritorna una lista con ogni parola origanariamente separta da spazi come singolo elemento.
-    return len(l[-1])
+    return len(l[1])
 
-print(lenght_of_last_word("viva il falchetto"))
+print(lenght_of_last_word("Hello world"))
 
 
 
@@ -53,7 +53,6 @@ def majority_element(nums: list[int]) -> int:
     for a in nums:
         if nums.count(a) > lunghezza :
             return a
-        
     return None
         
 

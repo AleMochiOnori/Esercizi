@@ -415,3 +415,9 @@ else :
 
 
 
+current_users : list = ["Bettany","Carl","Nomad","Ethan","Franco"]
+new_users : list = ["Carl","Franco","Joe","Noel","Abram"]
+[x.lower() for x in new_users]
+
+
+

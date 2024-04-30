@@ -99,3 +99,124 @@ print()
 
 
 # 8-8. User Albums: Start with your program from Exercise 8-7. Write a while loop that allows users to enter an album’s artist and title. Once you have that information, call make_album() with the user’s input and print the dictionary that’s created. Be sure to include a quit value in the while loop.
+
+
+
+if False : # Using if False for using the terminal without inserting the values every time. Remove it to try the program !!
+        def make_album(artist , album, songsNumber = None ) -> dict:
+            album = {"Artist ": artist, "Album" : album}
+            return album
+        while True : # Using True to be certain that the we can enter the loop and executing code without limitations; if not for the word break that stops the while loop.
+            x = input("Enter The artist name :") # Using input() to store data about the artist name by the user. 
+            f = input("Enter the album name :") # Using input() to store data about the artist name by the user.
+            print(make_album(x,f))
+            break
+print()
+
+
+
+# 8-9. Messages: Make a list containing a series of short text messages. Pass the list to a function called show_messages(), which prints each text message.
+
+
+def show_message(lista : list[str]) -> str :
+    for a in lista :
+        print(a)
+messages : list[str] = ["Hey how are you", "You are late again!!!"]        
+
+show_message(messages)
+
+print()
+
+# 8-10. Sending Messages: Start with a copy of your program from Exercise 8-9. Write a function called send_messages() that prints each text message and moves each message to a new list called sent_messages as it’s printed. After calling the function, print both of your lists to make sure the messages were moved correctly.
+
+
+
+sent_messages =  []
+
+def send_messages(messages,sent_messages) :
+    for a in messages :
+        print(a)
+        sent_messages.append(a)
+send_messages(messages , sent_messages)
+show_message(messages)     
+print()
+
+
+# 8-11. Archived Messages: Start with your work from Exercise 8-10. Call the function send_messages() with a copy of the list of messages. After calling the function, print both of your lists to show that the original list has retained its messages.
+
+
+messages_copy = messages.copy()
+send_messages(messages,messages_copy)
+
+
+print()
+
+# 8-12. Sandwiches: Write a function that accepts a list of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that’s being ordered. Call the function three times, using a different number of arguments each time.
+
+def make_sandwich(*items):
+    print("Ingredients :")
+    for item in items:
+        print("- " + item)
+
+
+make_sandwich("Lettuce", "Tomato", "Mayo")
+make_sandwich("Ham", "Cheese")
+make_sandwich("Peanut Butter", "Jelly")
+
+
+print()
+
+# 8-13. User Profile:  Build a profile of yourself by calling build_profile(), using your first and last names and three other key-value pairs that describe you. All the values must be passed to the function as parameters. The function then must return a string such as "Eric Crow, age 45, hair brown, weight 67"
+
+
+def build_profile(firstName : str, lastName : str, age : int, weight : int, hairColor : str):
+    profile = f"-{firstName} {lastName} , Age : {age}, weight : {weight} kg, Hair : {hairColor} "
+    return profile
+print(build_profile("Alessandro","Mochi onori", 25 , 75 , "Black" ))
+
+print()
+
+# 8-14. Cars: Write a function that stores information about a car in a dictionary. The function should always receive a manufacturer and a model name. It should then accept an arbitrary number of keyword arguments. Call the function with the required information and two other name-value pairs, such as a color or an optional feature. Your function should work for a call like this one: car = make_car('subaru', 'outback', color='blue', tow_package=True) Print the dictionary that’s returned to make sure all the information was stored correctly. 
+
+
+def cars(maniafacture,model,color,tow_package = None):
+    cars = {"Manufacturer": maniafacture,"Model": model,"Color": color}
+    print(cars)
+    return cars
+cars( "Ford","Mustang","Red")
+cars("Toyota","Pririus","Bue",tow_package=True)
+print()
+
+
+
+
+# 8-15. Printing Models: Put the functions for the example printing_models.py in a separate file called printing_functions.py. Write an import statement at the top of printing_models.py, and modify the file to use the imported functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 8-16. Imports: Using a program you wrote that has one function in it, store that function in a separate file. Import the function into your main program file, and call the function using each of these approaches:
+import function
+from function import add
+from function import add as fn
+import function as mn
+from function import *
+
+
+add(2,3)
+print()
