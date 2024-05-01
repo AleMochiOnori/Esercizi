@@ -402,6 +402,7 @@ else :
         else:
             print("Hello " , x , ", thank you for logging in again.")
 
+print()
 
 # 5-10. Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
 # • Make a list of five or more usernames called current_users.
@@ -413,11 +414,49 @@ else :
 
 
 
-
-
 current_users : list = ["Bettany","Carl","Nomad","Ethan","Franco"]
 new_users : list = ["Carl","Franco","Joe","Noel","Abram"]
-[x.lower() for x in new_users]
+lowered = [x.lower() for x in current_users]
+
+
+for a in new_users:
+    if a.lower() in lowered :
+        print(f"The person with the name {a}  need to enter a new user name")
+    else :
+        print(f"Username {a} is avaible")
+
+
+
+# 5-11. Ordinal Numbers: Ordinal numbers indicate their position in a list, such as 1st or 2nd. Most ordinal numbers end in th, except 1, 2, and 3.
+# • Store the numbers 1 through 9 in a list.
+# • Loop through the list.
+# • Use an if-elif-else chain inside the loop to print the proper ordinal ending for each number. Your output should read "1st 2nd 3rd 4th 5th 6th 7th 8th 9th", and each result should be on a separate line.
+
+
+
+numbers_list : list[int] = [1,2,3,4,5,6,7,8,9]
+
+for num in numbers_list :
+    if num == 2 :
+        print("2nd")
+    elif num == 3 :
+        print("3rd")
+    elif num == 1:
+        print("1st")
+    elif num == 4 :
+        print("4th")
+    elif num == 5 :
+        print("5th")
+    elif num == 6 :
+        print("6th")    
+    elif num == 7 :
+        print("7th")
+    elif num == 8 :
+        print("8th")
+    else :
+        print("9th")
+
+
 
 
 

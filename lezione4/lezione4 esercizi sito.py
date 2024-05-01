@@ -216,7 +216,10 @@ from function import add
 from function import add as fn
 import function as mn
 from function import *
-
-
+fn(add(2,6))
+mn(add(2,3))
 add(2,3)
 print()
+ciao = 2,9
+ciao.__add__()
+print(ciao)
