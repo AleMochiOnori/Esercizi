@@ -196,14 +196,16 @@ print()
 
 
 
+from printing_functions import cars
+
+cars("Lamborghini","AX Model" , "Blue")
 
 
 
 
 
 
-
-
+print()
 
 
 
@@ -216,10 +218,44 @@ from function import add
 from function import add as fn
 import function as mn
 from function import *
-fn(add(2,6))
+
 mn(add(2,3))
 add(2,3)
 print()
 ciao = 2,9
 ciao.__add__()
 print(ciao)
+
+
+
+# 8-17. Styling Functions: Choose any three programs you wrote for this chapter, and make sure they follow the styling guidelines described in this section.
+
+
+
+def build_profile(first_name: str, last_name: str, age: int, weight: int, hair_color: str):
+    profile = f"-{first_name} {last_name}, Age: {age}, Weight: {weight} kg, Hair: {hair_color}"
+    return profile
+
+print(build_profile("Alessandro", "Mochi onori", 25, 75, "Black"))
+print()
+
+def make_sandwich(*items):
+    print("Ingredients:")
+    for item in items:
+        print("- " + item)
+
+make_sandwich("Lettuce", "Tomato", "Mayo")
+make_sandwich("Ham", "Cheese")
+make_sandwich("Peanut Butter", "Jelly")
+
+sent_messages = []
+
+def send_messages(messages, sent_messages):
+    for message in messages:
+        print(message)
+        sent_messages.append(message)
+
+messages = ["Message 1", "Message 2", "Message 3"]
+send_messages(messages, sent_messages)
+print(sent_messages)
+print()

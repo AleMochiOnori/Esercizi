@@ -294,9 +294,6 @@ else:
 
 
 
-
-
-
 person : int = 30 
 
 if person < 2 :
@@ -313,7 +310,7 @@ elif person >= 65 :
 
 
 
-
+print()
 
 
 
@@ -352,8 +349,6 @@ if "apple" in favouirete_fruits :
 # • Otherwise, print a generic greeting, such as Hello Jaden, thank you for logging in again.        
         
 
-
-
 user_names: list = ["admin","user123","johndoe","sarahsmith","techguru45"]
 
 
@@ -364,12 +359,6 @@ for x in user_names:
             print("Hello admin, would you like to see a status report?")
     else:
         print("Hello " , x , ", thank you for logging in again.")
-
-
-
-
-
-
 
 
 
@@ -404,6 +393,13 @@ else :
 
 print()
 
+
+
+
+
+
+
+
 # 5-10. Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
 # • Make a list of five or more usernames called current_users.
 # • Make another list of five usernames called new_users. Make sure one or two of the new usernames are also in the current_users list.
@@ -414,16 +410,26 @@ print()
 
 
 
-current_users : list = ["Bettany","Carl","Nomad","Ethan","Franco"]
 new_users : list = ["Carl","Franco","Joe","Noel","Abram"]
+current_users : list = ["Bettany","Carl","Nomad","Ethan","Franco"]
 lowered = [x.lower() for x in current_users]
 
 
 for a in new_users:
     if a.lower() in lowered :
-        print(f"The person with the name {a}  need to enter a new user name")
+        print(f"{a} is already taken, the person with the name {a} needs to enter a new user name")
     else :
         print(f"Username {a} is avaible")
+
+
+
+print()
+
+
+
+
+
+
 
 
 
