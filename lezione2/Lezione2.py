@@ -291,11 +291,11 @@ favouite_Numbers : dict = {
 
 
 
-print("Il numero preferito di Alessandro è :",favouite_Numbers["Alessandro"],
-      "Il numero preferito di Flavio è :",favouite_Numbers["Flavio"],  
-      "Il numero preferito di Cikolino è :",favouite_Numbers["Cikolino"],
-      "Il numero preferito di Robrta è :",favouite_Numbers["Roberta"],
-      "Il numero preferito di Alessio è :",favouite_Numbers["Alessio"]
+print("Il numero preferito di Alessandro è :", favouite_Numbers["Alessandro"],
+      "Il numero preferito di Flavio è :", favouite_Numbers["Flavio"],  
+      "Il numero preferito di Cikolino è :", favouite_Numbers["Cikolino"],
+      "Il numero preferito di Robrta è :", favouite_Numbers["Roberta"],
+      "Il numero preferito di Alessio è :", favouite_Numbers["Alessio"]
       )
 
 

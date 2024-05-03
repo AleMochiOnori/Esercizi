@@ -219,7 +219,6 @@ from function import add as fn
 import function as mn
 from function import *
 
-mn(add(2,3))
 add(2,3)
 print()
 ciao = 2,9
