@@ -62,7 +62,7 @@ def count_isolated(lista : list[int]) -> int:
    for a in lista :
        if a + 1 == a :
         return a
-print(count_isolated([4,6,8,8,5,5,6,6]))
+print(count_isolated([2,6,8,8,5,5,6,6]))
 
 
 
@@ -71,7 +71,7 @@ print(count_isolated([4,6,8,8,5,5,6,6]))
 
 def remove_elements(original_set: set[int], elements_to_remove: list[int]) -> set[int]:
     return original_set - set(elements_to_remove)
-print(remove_elements({2,3,5,7},{2,3}))
+print(remove_elements({2,3,5,7},[2,3]))
 
 
 
