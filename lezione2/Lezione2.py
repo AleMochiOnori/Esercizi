@@ -514,7 +514,7 @@ complex = [
         "Robertino": [50, 43, {"ciao"}]
     },
     {
-        "Manuel": [20, 34, 32, ["ciao"]],
+        "Manuel": [20, 34, 32, {"ciao"}],
         "Lucas": [10, 31, {"ciao"}],
         "Martina": [90, 67, 54, {"ciao"}],
         "Electra": [23, 67, 98, {"ciao"}],
@@ -532,7 +532,7 @@ complex = [
 
 for dictionary in complex:
     for a,b in dictionary.items():
-        print(a)
-        for x in b:
+        print(a,b)
+        for x in b[-1]:
             print(x)
-        print()    
+            print()    
