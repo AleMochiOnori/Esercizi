@@ -170,3 +170,72 @@ iceCream.display_flavors()
 
 
 print()
+
+
+
+
+
+
+# 9-7. Admin: An administrator is a special kind of user. Write a class called Admin that inherits from the User class you wrote in Exercise 9-3 or Exercise 9-5. Add an attribute, privileges, that stores a list of strings like "can add post", "can delete post", "can ban user", and so on. Write a method called show_privileges() that lists the administrator’s set of privileges. Create an instance of Admin, and call your method. 
+
+
+
+
+class Admin :
+    def __init__(self, first_name : str , last_name : str , age : int , gender : str, privileges : list):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age 
+        self.gender = gender
+        self.privileges = privileges
+
+    def showPrivileges(self):
+        for a in self.privileges :
+            self.privileges = a
+            print(self.privileges)        
+
+admin = Admin("Carlo" , "Grappi" , 35 , "Male" , ["Can add post", "Can delete post " , "Can ban user"])        
+admin.showPrivileges()
+
+print()
+
+
+
+# 9-8. Privileges: Write a separate Privileges class. The class should have one attribute, privileges, that stores a list of strings as described in Exercise 9-7. Move the show_privileges() method to this class. Make a Privileges instance as an attribute in the Admin class. Create a new instance of Admin and use your method to show its privileges.
+
+
+
+class Admin2 :
+    def __init__(self, first_name : str , last_name : str , age : int , gender):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age 
+        self.gender = gender
+        self.privileges = Privileges(["Can add post", "Can delete post " , "Can ban user"])
+        
+    def showPriviliges(self):
+        self.privileges.showPrivileges()
+
+
+
+class Privileges :
+    def __init__(self,privileges):
+        self.privileges = privileges
+    def showPrivileges(self):
+        for a in self.privileges :
+            self.privileges = a
+            print("Admin" , self.privileges)        
+
+
+
+admin2 = Admin2("Flavio" , "Barzotti" , 3 , "Male",)
+
+    
+admin2.showPriviliges()   
+
+
+
+
+
+
+# 9-9 
