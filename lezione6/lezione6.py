@@ -164,3 +164,11 @@ cibi = [
 
 menu = Menu(food=cibi)  
 print(menu)
+
+
+
+
+class Cikolino:
+    def __init__(self,a) -> None:
+        self.a = a
+        
