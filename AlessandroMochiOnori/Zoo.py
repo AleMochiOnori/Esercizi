@@ -13,7 +13,7 @@ class Animal:
         self.height = height 
         self.width = width
         self.preffered_habitat = preferred_habitat
-        self.health = 0
+        self.health = 10
         self.animalArea = height * width
 
 
@@ -33,35 +33,42 @@ class Zookeeper :
         self.name = name
         self.lastName = lastName
         self.id = id
-        self.food = ["food"]
 
 
-    def add_animal(self, animal : Animal , fence  : Fence = []) :
+    def add_animal(self, animal : Animal , fence  : Fence) :
         if animal.animalArea  <  fence.area and animal.preffered_habitat == "Savana" and fence.habitat == "Savana" and fence.temperature > 20:
             fence.animals.append(animal)
             occupation = fence.area - animal.animalArea
             print(f"added {animal.name} occupied {occupation}")
+            print()
         else : 
             print(f"{animal.name} is too big or it's not his habitat")    
 
-    def removeAnimal(self , animal : Animal , fence : Fence  = []) :
+    def remove_animal(self , animal : Animal , fence : Fence ) :
         if fence.animals != [] :
             fence.animals.remove(animal)
             occupation = fence.area - animal.animalArea
             fence.area = occupation + animal.animalArea
-            print(animal.name , "has been removed and fence area is reset to", fence.area)
+            rounded = round(fence.area)
+            print(animal.name , "has been removed and fence area is reset to", rounded)
         else :
             print(animal.name , "is not in the fence")
 
-    def feedAnimal(self , animal : Animal) :
-        occupation = fence.area - animal.animalArea
-        fence.area = occupation + animal.animalArea
-        if animal.animalArea < fence.area :
-            animal.health = animal.health + 1
-            animal.animalArea = animal.animalArea + 2
-            print(f"animal health is {animal.health} and his area is {animal.animalArea}")    
+    def feed(self , animal : Animal) :
+        residual = fence.area - animal.animalArea
+        fence.area = residual + animal.animalArea
+        if animal.animalArea <= fence.area:
+            animal.health = animal.health * 1.01
+            rounded = round(animal.health)
+            print()
+            if animal.health >= 100 :
+                print(f"{animal.name} cannot be fed again. He's too healty")
+            animal.animalArea = animal.animalArea * 1.02
+            rounded2 = round(animal.animalArea)
+            print(f"{animal.name} health is {rounded} and his area is {rounded2}")    
+            print()
         else :
-            print(f"{animal.name} cannot be fed. He's too fat")
+            print(f"{animal.name} cannot be fed")
 
 
 
@@ -83,24 +90,33 @@ class Zookeeper :
 # Savana Fence
 # Animals : Leon , zebra , elephant
 
-fence = Fence(500 , 34 , "Savana")  # Istance of Fence class to initalize fence values
+fence = Fence(200 , 34 , "Savana")  # Istance of Fence class to initalize fence values
 
 
 leon = Animal("Bity" , "Leon", 6 , 10, 2 , "Savana")
 zebra = Animal("Lines" , "Zebra", 20 , 5 , 10 , "Savana" )
-elephant = Animal("Ruffo" , "Elephant" , 3 , 30 , 40 ,"Savana")
+elephant = Animal("Ruffo" , "Elephant" , 3 , 3 , 40 ,"Savana")
 
 
 custodeZoo = Zookeeper("Francesco" , "Adriani" , 234)
 custodeZoo.add_animal(leon,fence)
-custodeZoo.removeAnimal(leon,fence)
+custodeZoo.remove_animal(leon,fence)
 custodeZoo.add_animal(zebra,fence)
-custodeZoo.removeAnimal(zebra,fence)
+custodeZoo.remove_animal(zebra,fence)
 custodeZoo.add_animal(elephant,fence)
-
-
-
-
+custodeZoo.remove_animal(elephant,fence)
+custodeZoo.feed(elephant)
+custodeZoo.add_animal(leon,fence)
+custodeZoo.feed(leon)
+custodeZoo.feed(leon)
+custodeZoo.feed(leon)
+custodeZoo.feed(leon)
+custodeZoo.feed(leon)
+custodeZoo.feed(leon)
+custodeZoo.feed(leon)
+custodeZoo.feed(leon)
+custodeZoo.feed(elephant)
+custodeZoo.add_animal(zebra,fence)
 
 
 #####################################################################
