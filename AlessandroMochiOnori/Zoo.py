@@ -36,11 +36,10 @@ class Zookeeper :
 
 
     def add_animal(self, animal : Animal , fence  : Fence) :
-        if animal.animalArea  <  fence.area and animal.preffered_habitat == "Savana" and fence.habitat == "Savana" and fence.temperature > 20:
+        if animal.animalArea  <  fence.area and animal.preffered_habitat == "Savana" and fence.habitat == "Savana" and fence.temperature > 20 and animal not in fence.animals:
             fence.animals.append(animal)
             occupation = fence.area - animal.animalArea
             print(f"added {animal.name} occupied {occupation}")
-            print()
         else : 
             print(f"{animal.name} is too big or it's not his habitat")    
 
@@ -60,18 +59,16 @@ class Zookeeper :
         if animal.animalArea <= fence.area and animal in fence.animals:
             animal.health = animal.health * 1.01
             rounded = round(animal.health)
-            print()
             if animal.health >= 100 :
                 print(f"{animal.name} cannot be fed again. He's too healty")
             animal.animalArea = animal.animalArea * 1.02
             rounded2 = round(animal.animalArea)
             print(f"{animal.name} health is {rounded} and his area is {rounded2}")    
-            print()
         else :
             print(f"{animal.name} cannot be fed")
 
 
-    def clean(self, fence : Fence) :
+    def clean(self, fence : Fence) -> float :
         if fence.area == 0:
             return f"fence area is {fence.area}"
           
@@ -81,40 +78,19 @@ class Zookeeper :
 #######################################################################
 
 
+# Guardians :
 
+custodeZoo = Zookeeper("Francesco" , "Adriani" , 234)
 
-
-
-
-# Francesco Adriani Zookeeper
-# Savana Fence
-# Animals : Leon , zebra , elephant
+# Fences :
 
 fence = Fence(200 , 34 , "Savana")  # Istance of Fence class to initalize fence values
 
+# With Animals
 
 leon = Animal("Bity" , "Leon", 6 , 10, 2 , "Savana")
 zebra = Animal("Lines" , "Zebra", 20 , 5 , 10 , "Savana" )
 elephant = Animal("Ruffo" , "Elephant" , 3 , 3 , 40 ,"Savana")
-
-
-custodeZoo = Zookeeper("Francesco" , "Adriani" , 234)
-custodeZoo.add_animal(leon,fence)
-custodeZoo.remove_animal(leon,fence)
-custodeZoo.add_animal(zebra,fence)
-custodeZoo.remove_animal(zebra,fence)
-custodeZoo.add_animal(elephant,fence)
-custodeZoo.remove_animal(elephant,fence)
-custodeZoo.feed(elephant)
-custodeZoo.add_animal(leon,fence)
-custodeZoo.feed(leon)
-custodeZoo.feed(leon)
-custodeZoo.feed(elephant)
-custodeZoo.add_animal(zebra,fence)
-custodeZoo.clean(fence)
-
-
-
 
 
 
