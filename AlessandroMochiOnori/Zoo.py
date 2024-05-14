@@ -13,8 +13,8 @@ class Animal:
         self.height = height 
         self.width = width
         self.preffered_habitat = preferred_habitat
-        self.health = 10
         self.animalArea = height * width
+        self.health = 10
 
 
 
@@ -57,7 +57,7 @@ class Zookeeper :
     def feed(self , animal : Animal) :
         residual = fence.area - animal.animalArea
         fence.area = residual + animal.animalArea
-        if animal.animalArea <= fence.area:
+        if animal.animalArea <= fence.area and animal in fence.animals:
             animal.health = animal.health * 1.01
             rounded = round(animal.health)
             print()
@@ -71,10 +71,10 @@ class Zookeeper :
             print(f"{animal.name} cannot be fed")
 
 
-
-
-
-
+    def clean(self, fence : Fence) :
+        if fence.area == 0:
+            return f"fence area is {fence.area}"
+          
 
 
 
@@ -109,14 +109,13 @@ custodeZoo.feed(elephant)
 custodeZoo.add_animal(leon,fence)
 custodeZoo.feed(leon)
 custodeZoo.feed(leon)
-custodeZoo.feed(leon)
-custodeZoo.feed(leon)
-custodeZoo.feed(leon)
-custodeZoo.feed(leon)
-custodeZoo.feed(leon)
-custodeZoo.feed(leon)
 custodeZoo.feed(elephant)
 custodeZoo.add_animal(zebra,fence)
+custodeZoo.clean(fence)
+
+
+
+
 
 
 #####################################################################
