@@ -14,7 +14,7 @@ class Animal:
         self.width = width
         self.preffered_habitat = preferred_habitat
         self.animalArea = height * width
-        self.health = 10
+        self.health = round(100 * (1 / age), 3)
 
 
 
