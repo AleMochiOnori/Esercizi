@@ -68,10 +68,18 @@ class Zookeeper :
             print(f"{animal.name} cannot be fed")
 
 
-    def clean(self, fence : Fence) -> float :
+
+   def clean(self, fence : Fence) :
         if fence.area == 0:
-            return f"fence area is {fence.area}"
-          
+            return f"fence area is {residual}"
+        for animal in fence.animals :  
+            animalArea = animal.width * animal.height
+            residual = fence.area - animalArea
+            fence.area = residual + animalArea
+            cleaningTime = residual / animalArea
+        return cleaningTime   
+        
+
 
 
 
