@@ -2,11 +2,11 @@ class Zoo :
     def __init__(self,fences :str,zoo_keepers):
         self.fences = fences
         self.zoo_keepers = zoo_keepers
-
+        
 
 
 class Animal:
-    def __init__(self,name : str, species : str, age : int , height : float, width : float, preferred_habitat : str):
+    def __init__(self, name : str, species : str, age : int , height : float, width : float, preferred_habitat : str):
         self.name = name
         self.species = species 
         self.age = age
@@ -29,13 +29,13 @@ class Fence :
 
 
 class Zookeeper :
-    def __init__(self,name,lastName,id):
+    def __init__(self,name,surname,id):
         self.name = name
-        self.lastName = lastName
+        self.lastName = surname
         self.id = id
 
     def add_animal(self, animal : Animal , fence  : Fence) :
-        if animal.animalArea <  fence.area  and animal.preffered_habitat ==  fence.habitat and fence.temperature > 20 and animal not in fence.animals:
+        if animal.animalArea <  fence.area  and animal.preffered_habitat == fence.habitat and fence.temperature > 20 and animal not in fence.animals:
             fence.animals.append(animal)
 
 
@@ -66,10 +66,10 @@ class Zookeeper :
     def describe_zoo(self):
         print()
         for zookeeper in zookeepers :
-            print(f"- Guardians of the zoo  =   Name : {zookeeper.name} , Lastname : {zookeeper.lastName} , ID  : {zookeeper.id}" )
+            print(f"- Guardian of the zoo  =   Name : {zookeeper.name} , Lastname : {zookeeper.lastName} , ID  : {zookeeper.id}" )
             print()
-        for animal_fence in fences:
-            print(f"- Fence Habitat : {animal_fence.habitat} , Temperature : {animal_fence.temperature}, Area is : {animal_fence.area}")  
+        for animal_fence in fence:
+            print(f"- Fence Habitat : {animal_fence.habitat} , Temperature : {animal_fence.temperature} , Area is : {animal_fence.area}")  
         for animal in fence.animals:
             rounded = round(animal.health)
             print()
@@ -77,7 +77,9 @@ class Zookeeper :
             print(f"- Animal Name : {animal.name} , Species : {animal.species} , Age : {animal.age} Height : {animal.height} , Width : {animal.width} , Preferred habitat : {animal.preffered_habitat}")
             print(f"- Area of {animal.name} is {rounded2}")
             print(f"- Health of {animal.name} is {rounded}")
-        
+
+
+
 
 
 #######################################################################
@@ -90,27 +92,18 @@ custodeZoo2 = Zookeeper("Flavio" , "Strati" , 30)
 
 zookeepers : list = [custodeZoo,custodeZoo2]
 
-# Fences :
+# Fence :
 
 fence = Fence(200 , 34 , "Savana")  # Istance of Fence class to initalize fence values
-fence2 = Fence(600 , 45 , "Savana")  # Istance of Fence class to initalize fence values
-
-fences = [fence,fence2]
 
 # With Animals
 
-leon = Animal("Bity" , "Leon", 6 , 10, 2 , "Savana")
+
+
+leon = Animal("Lion king" , "Leon", 6 , 10, 2 , "Savana")
 zebra = Animal("Lines" , "Zebra", 20 , 5 , 10 , "Savana" )
 elephant = Animal("Ruffo" , "Elephant" , 3 , 9 , 40 ,"Savana")
-
-
-
-custodeZoo.add_animal(leon,fence)
-custodeZoo.add_animal(elephant,fence)
-custodeZoo.feed(leon)
-custodeZoo.describe_zoo()
-
-
+iena = Animal("Creepy laugh" , "iena" , 10 , 2 ,  2 , "Savana")
 
 
 
