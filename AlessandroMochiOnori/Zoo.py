@@ -69,7 +69,7 @@ class Zookeeper :
             print(f"- Guardians of the zoo  =   Name : {zookeeper.name} , Lastname : {zookeeper.lastName} , ID  : {zookeeper.id}" )
             print()
         for animal_fence in fences:
-            print(f"- Fence Habitat : {animal_fence.habitat} , Temperature : {animal_fence.temperature}, Area is : {animal_fence.area}")  
+            print(f"- Fence Habitat : {animal_fence.habitat} , Temperature : {animal_fence.temperature} , Area is : {animal_fence.area}")  
         for animal in fence.animals:
             rounded = round(animal.health)
             print()
