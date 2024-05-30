@@ -1,3 +1,4 @@
+
 class Zoo :
     def __init__(self,fences :str,zoo_keepers):
         self.fences = fences
@@ -68,8 +69,6 @@ class Zookeeper :
         for zookeeper in zookeepers :
             print(f"- Guardian of the zoo  =   Name : {zookeeper.name} , Lastname : {zookeeper.lastName} , ID  : {zookeeper.id}" )
             print()
-        for animal_fence in fences:
-            print(f"- Fence Habitat : {animal_fence.habitat} , Temperature : {animal_fence.temperature}, Area is : {animal_fence.area}")  
         for animal in fence.animals:
             rounded = round(animal.health)
             print()
@@ -100,7 +99,7 @@ fence = Fence(200 , 34 , "Savana")  # Istance of Fence class to initalize fence 
 
 
 
-leon = Animal("Lion king" , "Leon", 6 , 10, 2 , "Savana")
+lion = Animal("Lion king" , "Leon", 6 , 10, 2 , "Savana")
 zebra = Animal("Lines" , "Zebra", 20 , 5 , 10 , "Savana" )
 elephant = Animal("Ruffo" , "Elephant" , 3 , 9 , 40 ,"Savana")
 iena = Animal("Creepy laugh" , "iena" , 10 , 2 ,  2 , "Savana")
@@ -108,5 +107,3 @@ iena = Animal("Creepy laugh" , "iena" , 10 , 2 ,  2 , "Savana")
 
 
 #####################################################################
-
-
