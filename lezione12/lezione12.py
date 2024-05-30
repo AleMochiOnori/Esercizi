@@ -24,25 +24,23 @@ class Biblioteca:
                 libro.disponibilità = False
                 print("libro prestato")
                 return libro.disponibilità        
-                       
 
 
     def restituisci_libro(self,titolo : Libro):
         for libro in self.catalogo :
-            if titolo == libro.titolo and libro not in self.catalogo :
-                self.aggiungi_libro()
+            if titolo == libro.titolo and libro.disponibilità == False:
+                self.disponibilità = True
                 print("il libro è stato restituito")
 
-
     def mostra_libri_disponibili(self):
-        for libro in self.catalogo:
-            if libro.disponibilità == True:
+        if self.disponibilità == True:
+            for libro in self.catalogo:
                 print("I libri sono :" , libro.titolo)
 
 
 libro1 = Libro("Harry Potter", "Rowling")
 LavoratoreBiblioteca = Biblioteca()
 LavoratoreBiblioteca.aggiungi_libro(libro1)
-LavoratoreBiblioteca.presta_libro("Harry potter")
-LavoratoreBiblioteca.restituisci_libro(libro1)
+LavoratoreBiblioteca.presta_libro("Harry Potter")
+LavoratoreBiblioteca.restituisci_libro("Harry Potter")
 LavoratoreBiblioteca.mostra_libri_disponibili()
