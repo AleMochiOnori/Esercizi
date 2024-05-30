@@ -1,29 +1,40 @@
-class Book :
-    def __init__(self , book_id , title , author , is_borrowed):
-        self.book_id = book_id
-        self.title = title 
-        self.author = author
-        self.is_borrowed = False
+from abc import ABC , abstractmethod
 
 
-    def borrow(self) :
-        if self.is_borrowed  is False:
-            self.is_borrowed = True
+class AbcAnimal(ABC):
 
 
-    def return_book(self):
-        return self.is_borrowed 
-    
-class Member :
-    def __init__(self , member_id , name , borrowed_books : list[Book]):
-        self.member_id = member_id
-        self.name = name
-        self.borrowed_books = borrowed_books
+    @abstractmethod
+    def verso(self):
+        pass
 
 
-    def borrow_book(self,book):
-        if book.is_borrowed is False:
-            self.borrowed_books.append(book)
+class Gatto(AbcAnimal):
+    def __init__(self,nome) -> None:
+        super().__init__()
 
-    def return_book():
-                
+        self.nome = nome
+
+    def verso(self):
+        return print("Bau")
+
+    def describe(self,nome):
+        return f"{nome.nome} fa il verso "
+
+gatto = Gatto(nome="cikolino")     
+
+gatto.describe()
+
+
+class Cane(AbcAnimal):
+    def __init__(self) -> None:
+        super().__init__()
+
+    def verso(self):
+        return print("ciao")
+
+cane = Cane()
+
+gatto.verso()        
+
+

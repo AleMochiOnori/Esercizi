@@ -2,6 +2,11 @@ import random
 
 
 
+lista = ["_"] * 70
+tempo = 0
+
+
+
 
 def mossaTartaruga():
     mossaTartaruga  = random.randint(1,10)
@@ -17,9 +22,8 @@ def mossaTartaruga():
     return posizione
 
 
-def mossaLepre():
-    mossaLepre = random.randint(1,10)
-    posizione = 0      
+def mossaLepre(posizione):
+    mossaLepre = random.randint(1,10)  
     if mossaLepre >= 4 and mossaLepre <= 6 :
         posizione += 0
     elif mossaLepre >= 5 and mossaLepre <= 7:
@@ -34,33 +38,18 @@ def mossaLepre():
             posizione = 0        
     return posizione
 
-def posizione():
-    lista = ["_"] * 70
-    lepre = mossaLepre()
-    tartaruga = mossaTartaruga()
-    lista[lepre] = "T"
-    lista[tartaruga] = "H"
+
 
 
 
 def Gara():
-    lista = ["_"] * 70
-    lepre = mossaLepre()
-    tartaruga = mossaTartaruga()
-    i = 0
-    while len(lista) < 70 :
-        i += 1
+    while True:
+        lepre = mossaLepre(lepre)
+        tartaruga = mossaTartaruga(tartaruga)
         lista[lepre] = "T"
         lista[tartaruga] = "H"
-        for a in lista :
-            if lista[lepre] == lista[tartaruga] :
-                return "OUCH"
-            if lista[lepre] == 70 :
-                return "HARE WINS || YUCH!!!"
-            if lista[tartaruga] == 70 :
-                return "TORTOISE WINS! || VAY!!!"    
-            if "T" == 70 and "H" == 70 :
-                return "IT'S A TIE!!"
+
+
 print(Gara())
 
 
