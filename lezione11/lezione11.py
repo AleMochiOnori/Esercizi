@@ -36,12 +36,15 @@ class Cinema():
     def aggiungi_sala(self,sala):
         self.sale.append(sala)
         print(f"sala numero {sala} aggiunta ")
+        print(self.sale)
 
     def prenota_film(self,titolo_film,num_posti):
-        num_posti = num_posti.posti_totali - self.posti_prenotati
-        if titolo_film == self.titolo:
-            self.posti_prenotati = num_posti
-            print("film prenotato")
+        print(self.sale)
+        for sala in self.sale :
+            if sala.film_in_programmazione.titolo == self.titolo:
+                
+                self.posti_prenotati = num_posti
+                print("film prenotato")
 
 
 film = Film("Van Hellsing", 2)
@@ -50,3 +53,4 @@ GestoreSala.prenota_posti(0)
 GestoreSala.posti_disponibili()
 cliente = Cinema()
 cliente.prenota_film("Van Hellsing", 20)
+cliente.aggiungi_sala(3)

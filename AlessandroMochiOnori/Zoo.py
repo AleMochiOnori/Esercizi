@@ -50,7 +50,8 @@ class Zookeeper :
         for animal in fence.animals :
             if animal in fence.animals :
                 if animal.animalArea <= fence.area :
-                    animal.animalArea = animal.animalArea * 1.02
+                    animal.width *= 1.02
+                    animal.height *= 1.02
                     animal.health = animal.health * 1.01             
 
     def clean(self, fence : Fence) :

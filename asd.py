@@ -19,11 +19,11 @@ class Gatto(AbcAnimal):
         return print("Bau")
 
     def describe(self,nome):
-        return f"{nome.nome} fa il verso "
+        print(f"{nome} fa il verso ") 
 
 gatto = Gatto(nome="cikolino")     
 
-gatto.describe()
+gatto.describe("cikolo")
 
 
 class Cane(AbcAnimal):
