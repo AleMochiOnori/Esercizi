@@ -8,7 +8,7 @@ class TestPersona(unittest.TestCase):
         self.persona = Persona('Mario', 'Rossi')
 
     def test_initalization(self):
-        self.assertEqual(self.persona.first_name ,  "Mario")
+        self.assertEqual(self.persona.getName() ,  "Mario")
         self.assertEqual(self.persona.last_name , "Rossi")
         self.assertEqual(self.persona.età , 0)
 
