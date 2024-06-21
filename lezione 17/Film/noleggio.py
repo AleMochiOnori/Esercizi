@@ -1,20 +1,20 @@
 from film import Film
+from movie_genre import Drama,Azione,Commedia
 
 
 
 
-class Noleggio(Film):
-    def __init__(self, id, title,film_list):
-      super().__init__(id, title)
-      self.film_list = film_list
-      self.rented_films = {}
+class Noleggio:
+    def __init__(self,film_list):
+        self.film_list = film_list
+        self.rented_films = {}
 
     def isAvaible(self,film):
         if film in self.film_list:
-            print(f"Il film scelto è disponibile : {self.title}")
+            print(f"Il film scelto è disponibile : {self.get_title()}")
             return True
         else : 
-            print(f"Il film scelto non è disponibile : {self.title}")
+            print(f"Il film scelto non è disponibile : {self.get_title()}")
             return False
     
 
@@ -33,6 +33,25 @@ class Noleggio(Film):
             for id , film in self.rented_films.items():
                 film.remove(film)
             self.film_list.append(film)
+            print(f"Cliente: {clientID}! La penale da pagare per il film {self.get_title()} e' di {self.get_Penale()} euro!")
+        return self.calcoloPenaleRitardo(days)
+    
+
+    def print_movies(self):
+        for film in self.film_list:
+            print(f"{film.get_title()} - {film.get_title()}")
+
+
+    def printRentMovies(self,clientID):
+        if clientID in self.rented_films.keys():
+            print(self.rented_films.values())
+
+
+    
+
+            
+        
+
 
         
                     

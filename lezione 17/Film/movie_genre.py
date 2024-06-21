@@ -16,8 +16,8 @@ class Drama(Film):
     
 
 
-    def calcolaPenaleRitardo(self):
-        self.__penalità = self.__penalità + self.__penalità
+    def calcolaPenaleRitardo(self,days):
+        self.__penalità = self.__penalità * days
         return self.__penalità
     
 
@@ -36,8 +36,8 @@ class Azione(Film):
     
 
 
-    def calcolaPenaleRitardo(self):
-        self.__penalità = self.__penalità + self.__penalità
+    def calcolaPenaleRitardo(self,days):
+        self.__penalità = self.__penalità * days
         return self.__penalità
 
 
@@ -55,7 +55,7 @@ class Commedia(Film):
         return self.__penalità
     
 
-    def calcolaPenaleRitardo(self):
-        self.__penalità = self.__penalità + self.__penalità
+    def calcolaPenaleRitardo(self,days):
+        self.__penalità = self.__penalità * days
         return self.__penalità
 
