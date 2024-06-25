@@ -35,11 +35,28 @@ class PagamentoContanti(Pagamento):
         for banconota in banconote:
             pezzi = importo // banconota
             importo = round(importo - pezzi * banconota, 2)
-            
             if pezzi != 0 and banconota >=5:
-                print(f"{pezzi} di banconote da €{banconota}")
-            
+                return f"{pezzi} di banconote da €{banconota}"
             if pezzi != 0 and banconota < 5:
-                print(f"{pezzi} di monete da €{banconota}")
+                return f"{pezzi} di monete da €{banconota}"
 
 
+class PagamentoCartaDiCredito(Pagamento):
+    def __init__(self,importo : float , nomeTitolareCarta : str , dataDiScadenza: float , numeroCartaDiCredito : int ):
+        super().__init__()
+        self.set_pagamento(importo)
+        self.nomeTitolareCarta = nomeTitolareCarta
+        self.dataDiScadenza = dataDiScadenza
+        self.numeroCartaDiCredito = numeroCartaDiCredito
+
+    def dettagli_pagamento(self):
+        return f"Il pagamento è {self.get_pagamento()} con carta bancomat"
+    
+
+
+pagamento = Pagamento()
+
+contanti = PagamentoContanti(150)
+
+contanti.dettagli_pagamento()
+contanti.inPezziDa()

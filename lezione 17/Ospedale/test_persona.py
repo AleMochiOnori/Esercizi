@@ -36,3 +36,4 @@ if __name__ == '__main__':
 class TestDottore(unittest.TestCase):
     def setUp(self):
         self.dottore = Dottore("Alice","Cafagna","Oncrinologa",1200)
+        
