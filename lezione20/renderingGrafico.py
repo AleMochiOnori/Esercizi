@@ -63,10 +63,16 @@ class Rettangolo(Forma):
         for _ in range(1,altezzaLenght-1):
             print("*" , " " * (baseLenght-4), "*")
         print("*" * baseLenght)
+        print(f"L'area di questo quadrato è {self.getArea()}. La sua base è di {self.base} e la sua altezza è di {self.altezza}")  
 
 
 
 
+
+
+class Triangolo(Forma):
+    def __init__(self,base,lato1,lato2):
+        super().__init__("Triangolo")
 
 
 rettangolo = Rettangolo(10,4)
