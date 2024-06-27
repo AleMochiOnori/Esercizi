@@ -19,7 +19,7 @@ class Forma(ABC):
         pass
 
 class Quadrato(Forma):
-    def __init__(self, lato) -> None:
+    def __init__(self, lato):
         super().__init__("Quadrato")
         self.lato = lato
     
@@ -42,7 +42,32 @@ class Quadrato(Forma):
  
 
 
-caio = Quadrato(30)
 
 
-caio.render()
+class Rettangolo(Forma):
+    def __init__(self,altezza , base):
+        super().__init__("Rettangolo")
+        self.altezza = altezza
+        self.base = base
+
+
+    def getArea(self):
+        area = self.base * self.altezza
+        return area
+
+
+    def render(self):
+        altezzaLenght = self.altezza
+        baseLenght = self.base
+        print("*" * baseLenght)
+        for _ in range(1,altezzaLenght-1):
+            print("*" , " " * (baseLenght-4), "*")
+        print("*" * baseLenght)
+
+
+
+
+
+
+rettangolo = Rettangolo(10,4)
+rettangolo.render()
