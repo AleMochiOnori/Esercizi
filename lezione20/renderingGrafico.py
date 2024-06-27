@@ -30,19 +30,18 @@ class Quadrato(Forma):
     
 
     def render(self):
-        asterischi = self.lato
-        for lato in range(1,asterischi):    
-            print("*", end=" ")
-            if lato == asterischi:   
-                print("****")
-        for lato in range(1,asterischi): 
-            print("*")
-        for lato in range(1,asterischi + 1):    
-            print("*", end=" ") 
-       
+        lenght = self.lato
+        print("*" * (lenght))
+        for lato in range(1,lenght-1):    
+            print("*" , " " * (lenght -4),"*")
+        print("*" * (lenght))    
+      
 
 
-caio = Quadrato(10)
+ 
+
+
+caio = Quadrato(4)
 
 
 caio.render()
